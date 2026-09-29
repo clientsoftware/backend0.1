@@ -5,6 +5,7 @@ const demoParties = [
   { id: "P-104", name: "Lahore Copper Foundry & Scrap Dealer", type: "supplier", phone: "0345-7778899", address: "Badami Bagh, Lahore", openingBalance: 0, balance: -18000 }
 ];
 
+const demoItems = [
   { id: "ITM-01", name: "Super Enamelled Copper Wire 22 SWG", code: "CW22", barcode: "89640001", category: "Copper Wire", unit: "KG", purchasePrice: 3450, salePrice: 3850, stock: 85, minStock: 15, openingQty: 100 },
   { id: "demo-pipe-dual", name: "GI Pipe 1.5\" (Heavy) [Demo Dual-Unit]", nameUrdu: "جی آئی پائپ (ڈیمو)", code: "GIP-01", barcode: "1001", category: "Hardware / Pipes", unit: "KG", purchasePrice: 600, salePrice: 900, stock: 250, minStock: 15, openingQty: 250, altUnit: "Foot", altUnitFactor: 3, altUnitPrice: 300 },
   { id: "ITM-02", name: "Copper Wire 24 SWG (Pakistan Cables)", code: "CW24", barcode: "89640002", category: "Copper Wire", unit: "KG", purchasePrice: 3500, salePrice: 3900, stock: 60, minStock: 10, openingQty: 75 },
