@@ -39,7 +39,7 @@ mongoose
   .then(async () => {
     console.log("✅ MongoDB Atlas Connected Successfully!");
     await seedDefaultUsers();
-    await seedPageByPageDemoData();
+    // await seedPageByPageDemoData(); // Disabled for production clean state
   })
   .catch((err) => {
     console.error("❌ MongoDB Atlas Connection Error:", err.message);
