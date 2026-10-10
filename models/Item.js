@@ -12,6 +12,7 @@ const ItemSchema = new mongoose.Schema(
     unit: { type: String, default: "Pcs" },
     purchasePrice: { type: Number, default: 0 },
     salePrice: { type: Number, default: 0 },
+    labourRate: { type: Number, default: 0 },
     wholesalePrice: { type: Number, default: 0 },
     stock: { type: Number, default: 0 },
     lowStock: { type: Number, default: 0 },
