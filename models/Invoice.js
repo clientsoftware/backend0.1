@@ -30,6 +30,8 @@ const InvoiceSchema = new mongoose.Schema(
     salesman: { type: String, default: "" },
     status: { type: String, default: "open" },
     createdBy: { type: String, default: "" },
+    paidScrapReceived: { type: Number, default: 0 },
+    pendingScrap: { type: Number, default: 0 },
   },
   { timestamps: true }
 );
