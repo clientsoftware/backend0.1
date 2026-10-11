@@ -22,6 +22,7 @@ const {
   demoExpenses,
   demoBankAccounts,
   demoEmployees,
+  demoFactoryProcessing,
 } = require("./demoSeedData");
 
 const app = express();
@@ -127,6 +128,17 @@ app.post("/api/seed-electrical-demo", async (req, res) => {
 
     await Employee.deleteMany({});
     await Employee.insertMany(demoEmployees);
+
+    let ledgerDoc = await LedgerData.findOne({ storeId: "default-store" });
+    if (!ledgerDoc) {
+      ledgerDoc = new LedgerData({
+        storeId: "default-store",
+        factoryProcessing: demoFactoryProcessing || []
+      });
+    } else {
+      ledgerDoc.factoryProcessing = demoFactoryProcessing || [];
+    }
+    await ledgerDoc.save();
 
     res.json({ message: "Electric Shop & Copper Scrap Demo Data loaded into MongoDB Atlas!" });
   } catch (err) {

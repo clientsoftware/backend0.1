@@ -14,6 +14,12 @@ const ItemSchema = new mongoose.Schema(
     salePrice: { type: Number, default: 0 },
     labourRate: { type: Number, default: 0 },
     wholesalePrice: { type: Number, default: 0 },
+    itemType: { type: String, default: "general" }, // "finished_copper", "scrap", "general"
+    gauge: { type: String, default: "" }, // Wire Number / Gauge (e.g. 18, 20, 22)
+    retailRate: { type: Number, default: 0 }, // Retail Rate per KG
+    wholesaleLabourRate: { type: Number, default: 0 }, // Wholesale Labour Rate per KG
+    factoryCostA: { type: Number, default: 0 }, // Factory A specific cost per KG
+    factoryCostB: { type: Number, default: 0 }, // Factory B specific cost per KG
     stock: { type: Number, default: 0 },
     lowStock: { type: Number, default: 0 },
     minStock: { type: Number, default: 0 },

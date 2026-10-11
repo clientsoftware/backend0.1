@@ -32,6 +32,17 @@ const InvoiceSchema = new mongoose.Schema(
     createdBy: { type: String, default: "" },
     paidScrapReceived: { type: Number, default: 0 },
     pendingScrap: { type: Number, default: 0 },
+    saleCategory: { type: String, default: "retail" }, // "retail" (Full rate) or "wholesale" (Labour only)
+    scrapType: { type: String, default: "" }, // e.g. "Copper Chheelar", "Wire Scrap"
+    scrapQty: { type: Number, default: 0 }, // in KG
+    scrapRate: { type: Number, default: 0 }, // Rs per KG if purchased
+    scrapAmount: { type: Number, default: 0 },
+    labourTotal: { type: Number, default: 0 }, // Total Labour billed
+    factoryId: { type: String, default: "" },
+    factoryName: { type: String, default: "" },
+    processLoss: { type: Number, default: 0 }, // weight loss in kg
+    processLossPercent: { type: Number, default: 0 },
+    batchNumber: { type: String, default: "" },
   },
   { timestamps: true }
 );

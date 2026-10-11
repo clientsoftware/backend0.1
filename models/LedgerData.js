@@ -20,6 +20,8 @@ const LedgerDataSchema = new mongoose.Schema(
     production: { type: Array, default: [] },
     productionItems: { type: Array, default: [] },
     salaries: { type: Array, default: [] },
+    factoryProcessing: { type: Array, default: [] },
+    copperBatches: { type: Array, default: [] },
     counters: { type: Object, default: {} },
     business: { type: Object, default: {} },
   },
